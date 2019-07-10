@@ -22,7 +22,7 @@ export function getFourierData(points) {
         // to reorder the frequencies a little nicer, we pick from the front and back altermatively
         const j = i % 2 == 0 ? i / 2 : numPoints - ((i+1) / 2);
         const x = out[2 * j];
-        const y = out[2 * j + 1];
+        const y = out[2 * j + 2];
         const freq = ((j + numPoints / 2) % numPoints) - numPoints / 2;
         fftData.push({
             freq: freq,
